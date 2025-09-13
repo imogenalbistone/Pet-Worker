@@ -1,0 +1,314 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* General Body Styles - Classic Newspaper Theme */
+body {
+    font-family: 'Times New Roman', 'Georgia', serif;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #2c2c2c;
+    background-image: 
+        linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px),
+        linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* Header Styles - Newspaper Masthead */
+header {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    border-bottom: 3px solid #d4af37;
+}
+
+header h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 3em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 
+        2px 2px 4px rgba(0,0,0,0.8),
+        0 0 10px rgba(212, 175, 55, 0.3);
+    font-family: 'Times New Roman', serif;
+}
+
+/* Navigation Styles - Classic Newspaper Navigation */
+nav {
+    margin-top: 0.5rem;
+    border-top: 1px solid #444;
+    padding-top: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+}
+
+nav li {
+    border-right: 1px solid #444;
+}
+
+nav li:last-child {
+    border-right: none;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.7rem 1.5rem;
+    display: block;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+    position: relative;
+}
+
+nav a:hover {
+    background-color: #d4af37;
+    color: #1a1a1a;
+    text-shadow: 0 0 5px rgba(255,255,255,0.5);
+    box-shadow: inset 0 0 10px rgba(255,255,255,0.2);
+}
+
+/* Main Content Area - Grid Layout */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 
+        0 0 20px rgba(0,0,0,0.1),
+        inset 0 0 1px rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+    position: relative;
+}
+
+main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #d4af37, #f4e4a6, #d4af37);
+}
+
+/* Article Styles - Newspaper Column Layout */
+article {
+    column-count: 1;
+    column-gap: 30px;
+    text-align: justify;
+}
+
+article h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 2.5em;
+    font-weight: 900;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 
+        1px 1px 2px rgba(0,0,0,0.3),
+        0 0 5px rgba(212, 175, 55, 0.2);
+    border-bottom: 3px double #d4af37;
+    padding-bottom: 15px;
+    column-span: all;
+}
+
+article h3 {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #2c2c2c;
+    margin: 25px 0 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-left: 4px solid #d4af37;
+    padding-left: 15px;
+    text-shadow: 0 0 2px rgba(212, 175, 55, 0.3);
+}
+
+article p {
+    margin-bottom: 1.2em;
+    text-indent: 1.5em;
+    font-size: 1.05em;
+    line-height: 1.8;
+}
+
+article p:first-of-type {
+    font-size: 1.1em;
+    font-weight: 500;
+    text-indent: 0;
+}
+
+article a {
+    color: #1a5490;
+    text-decoration: underline;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+article a:hover {
+    color: #d4af37;
+    text-decoration: none;
+    text-shadow: 0 0 3px rgba(212, 175, 55, 0.5);
+}
+
+/* Section Styles for other pages */
+section {
+    padding: 20px 0;
+}
+
+section h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 2.2em;
+    font-weight: 900;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 
+        1px 1px 2px rgba(0,0,0,0.3),
+        0 0 5px rgba(212, 175, 55, 0.2);
+    border-bottom: 3px double #d4af37;
+    padding-bottom: 15px;
+}
+
+section p {
+    margin-bottom: 1.2em;
+    font-size: 1.05em;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+section ul {
+    margin: 20px 0;
+    padding-left: 30px;
+}
+
+section li {
+    margin-bottom: 10px;
+    font-size: 1.05em;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2em;
+        letter-spacing: 2px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        border-right: none;
+        border-bottom: 1px solid #444;
+        width: 100%;
+    }
+
+    nav li:last-child {
+        border-bottom: none;
+    }
+
+    nav a {
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    main {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+
+    article h2 {
+        font-size: 2em;
+    }
+
+    article {
+        column-count: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+        letter-spacing: 1px;
+    }
+
+    article h2 {
+        font-size: 1.6em;
+    }
+
+    article p {
+        text-indent: 0;
+        font-size: 1em;
+    }
+}
+
+/* Subtle shine effects */
+h1, h2, h3, nav a {
+    position: relative;
+}
+
+h1::after, h2::after, h3::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Hover animations */
+nav a {
+    overflow: hidden;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+nav a:hover::before {
+    left: 100%;
+}
+
+
